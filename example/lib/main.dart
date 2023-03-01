@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 400,
                 child: new OnscreenKeyboard2(
                   value: 'atha',
-                  initialCase: InitialCase.LOWER_CASE,
+                  initialCase: InitialCase2.LOWER_CASE,
                   backgroundColor: Colors.transparent,
                   buttonColor: Colors.transparent,
                   focusColor: Colors.red,

@@ -10,7 +10,7 @@ import 'package:onscreen_keyboard2/src/utils.dart';
 class OnscreenKeyboard2 extends StatelessWidget {
   final ValueChanged<String?>? onChanged;
   final String? value;
-  final InitialCase initialCase;
+  final InitialCase2 initialCase;
   final Color? borderColor;
   final Color? backgroundColor;
   final Color? buttonColor;
@@ -46,7 +46,7 @@ class OnscreenKeyboard2 extends StatelessWidget {
 
 class OnscreenKeyboardWidget extends StatefulWidget {
   final ValueChanged<String?>? onChanged;
-  final InitialCase? initialCase;
+  final InitialCase2? initialCase;
   final String? value;
   final Color? borderColor;
   final Color? backgroundColor;
@@ -102,20 +102,20 @@ class _OnscreenKeyboardWidgetState extends State<OnscreenKeyboardWidget> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     switch (widget.initialCase) {
-      case InitialCase.UPER_CASE:
+      case InitialCase2.UPER_CASE:
         BlocProvider.of<KeyboardShiftBloc>(context)
             .add(KeyboardShiftUpperCaseEvent());
 
         break;
-      case InitialCase.LOWER_CASE:
+      case InitialCase2.LOWER_CASE:
         BlocProvider.of<KeyboardShiftBloc>(context)
             .add(KeyboardShiftLowerCaseEvent());
         break;
-      case InitialCase.SENTENSE_CASE:
+      case InitialCase2.SENTENSE_CASE:
         BlocProvider.of<KeyboardShiftBloc>(context)
             .add(KeyboardShiftUpperCaseEvent());
         break;
-      case InitialCase.NUMERIC:
+      case InitialCase2.NUMERIC:
         BlocProvider.of<KeyboardShiftBloc>(context)
             .add(KeyboardShiftSymbolsEvent());
         break;
